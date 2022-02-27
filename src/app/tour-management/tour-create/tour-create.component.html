@@ -1,0 +1,36 @@
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
+<!--     aria-hidden="true">-->
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+<!--      <form [formGroup]="formCreate" (ngSubmit)="createCustomer()">-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Customer</h5>
+          <button [routerLink]="['/tour-list']" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label>Id:</label>
+          <div class="input-group mb-3">
+            <input [(ngModel)]="tour.id" class="form-control" placeholder="Enter a id" id="id" name="id">
+<!--&lt;!&ndash;            <p *ngIf="!formCreate?.get('id')?.valid" style="color: red">* id không được để trống</p>&ndash;&gt;-->
+          </div>
+          <label>Name:</label>
+          <div class="input-group mb-3">
+            <input [(ngModel)]="tour.name" class="form-control" placeholder="Enter a Name" id="name" name="name">
+<!--            <p *ngIf="formCreate?.get('name')?.valid" style="color: red">* không được nhập dưới 6 ký tự</p>-->
+          </div>
+          <label>Price:</label>
+          <div class="input-group mb-3">
+            <input [(ngModel)]="tour.price" class="form-control" placeholder="Enter a Price" id="image" name="price">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button [routerLink]="['/tour-list']" type="button" class="btn btn-secondary" data-dismiss="modal">Back to list</button>
+          <button [routerLink]="['/tour-list']" (click)="createTour()" type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+<!--      </form>-->
+    </div>
+  </div>
+<!--</div>-->
+
